@@ -1,0 +1,151 @@
+{
+  "data": {
+    "retail_users": 37392,
+    "market_users": 624589,
+    "retail_buy_rate": 0.51797,
+    "retail_items_per_user": 32.25431,
+    "retail_items_per_buy_day": 18.02069,
+    "market_ctr": 0.0245,
+    "market_clickout_rate": 0.03723,
+    "retail_items_p99": 265.0
+  },
+  "aa": {
+    "splits": 2000,
+    "fpr": {
+      "buy": 0.039,
+      "items": 0.044,
+      "basket": 0.0535,
+      "basket_naive": 0.153,
+      "ctr": 0.051,
+      "ctr_naive": 0.4265,
+      "out": 0.0585
+    },
+    "fwer_uncorrected": 0.207,
+    "fwer_holm": 0.0455,
+    "fwer_bonferroni": 0.0455
+  },
+  "mde_28d": {
+    "buy": {
+      "var_reduction": 0.21641,
+      "mde_plain": 0.02795,
+      "mde_cuped": 0.02474
+    },
+    "items": {
+      "var_reduction": 0.31681,
+      "mde_plain": 0.05111,
+      "mde_cuped": 0.04224
+    },
+    "basket": {
+      "var_reduction": 0.26572,
+      "mde_plain": 0.02677,
+      "mde_cuped": 0.02294
+    },
+    "ctr": {
+      "var_reduction": 0.01991,
+      "mde_plain": 0.02116,
+      "mde_cuped": 0.02095
+    },
+    "out": {
+      "var_reduction": 0.02261,
+      "mde_plain": 0.03605,
+      "mde_cuped": 0.03565
+    }
+  },
+  "mde_by_days_items": [
+    {
+      "days": 7,
+      "users": 16447,
+      "mde_plain": 0.05938,
+      "mde_cuped": 0.0531,
+      "var_reduction": 0.20042
+    },
+    {
+      "days": 14,
+      "users": 24657,
+      "mde_plain": 0.05331,
+      "mde_cuped": 0.04567,
+      "var_reduction": 0.26598
+    },
+    {
+      "days": 21,
+      "users": 30796,
+      "mde_plain": 0.05186,
+      "mde_cuped": 0.0435,
+      "var_reduction": 0.29664
+    },
+    {
+      "days": 28,
+      "users": 37392,
+      "mde_plain": 0.05111,
+      "mde_cuped": 0.04224,
+      "var_reduction": 0.31681
+    }
+  ],
+  "peeking": {
+    "splits": 1000,
+    "fpr_fixed_28d": 0.052,
+    "fpr_daily_peeking": 0.258,
+    "fpr_weekly_peeking_0_05": 0.127,
+    "fpr_weekly_pocock": 0.047
+  },
+  "srm_demo": [
+    {
+      "lost_share_of_nonbuyers": 0.05,
+      "lost_users": 459,
+      "lost_share_of_group": 0.02448,
+      "n_test": 18291,
+      "n_control": 18642,
+      "srm_p": 0.06779,
+      "buy_diff_pp": 1.7009,
+      "buy_p": 0.00107
+    },
+    {
+      "lost_share_of_nonbuyers": 0.1,
+      "lost_users": 909,
+      "lost_share_of_group": 0.04848,
+      "n_test": 17841,
+      "n_control": 18642,
+      "srm_p": 3e-05,
+      "buy_diff_pp": 3.04526,
+      "buy_p": 0.0
+    },
+    {
+      "lost_share_of_nonbuyers": 0.2,
+      "lost_users": 1794,
+      "lost_share_of_group": 0.09568,
+      "n_test": 16956,
+      "n_control": 18642,
+      "srm_p": 0.0,
+      "buy_diff_pp": 5.89733,
+      "buy_p": 0.0
+    }
+  ],
+  "power_sim": {
+    "effect": 0.04,
+    "sims": 1000,
+    "power_plain": 0.562,
+    "power_cuped": 0.744
+  },
+  "example": {
+    "effect_injected": 0.04,
+    "n_test": 18764,
+    "n_control": 18628,
+    "srm_p": 0.48186,
+    "items": {
+      "plain": {
+        "rel": 0.06445,
+        "lo": 0.02753,
+        "hi": 0.10137,
+        "p": 0.00062
+      },
+      "cuped": {
+        "rel": 0.05263,
+        "lo": 0.0221,
+        "hi": 0.08316,
+        "p": 0.00073
+      }
+    },
+    "guardrail_buy_diff_pp": 0.5432,
+    "guardrail_buy_p": 0.29323
+  }
+}
